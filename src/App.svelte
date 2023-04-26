@@ -3,5 +3,5 @@
   Hello this is my CV
 </main>
 
-<style>
+<style lang="scss">
 </style>
