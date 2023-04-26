@@ -1,6 +1,10 @@
+<script lang="ts">
+  import Profile from "./components/Profile.svelte";
+</script>
+
 <main>
   <h1>CV</h1>
-  Hello this is my CV
+  <Profile/>
 </main>
 
 <style lang="scss">
