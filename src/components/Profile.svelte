@@ -1,8 +1,11 @@
 <script lang="ts">
-  import profilePicture from "../assets/pfp.jpg";
+  import boringProfilePicture from "../assets/pfp.jpg";
+  import funProfilePicture from "../assets/pfp0.jpg";
+
   let isFunMode = false;
 
   $: myName = isFunMode ? "Andres Flores 🤙" : "Andres Flores";
+  $: profilePicture = isFunMode ? funProfilePicture : boringProfilePicture;
 
   function toggleFunMode() {
     isFunMode = !isFunMode;
@@ -20,6 +23,10 @@
     border-radius: 50%;
     height: 100px;
     width: 100px;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   #my-name {
