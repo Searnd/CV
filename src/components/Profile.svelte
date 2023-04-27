@@ -11,8 +11,8 @@
   }
 </script>
 
-<div>
-  <div on:mouseleave={toggleFunMode} on:mouseover={toggleFunMode} class="flip-outer">
+<div class="profile-area">
+  <div on:click={toggleFunMode} class="flip-outer" class:fun={isFunMode}>
     <div class="flip-inner">
       {#if !isFunMode}
       <div class="flip-front">
@@ -29,25 +29,25 @@
 </div>
 
 <style lang="scss">
+  .profile-area {
+    width: 25%;
+  }
   .flip-outer {
     perspective: 1000px;
     &:hover {
       cursor: pointer;
-
+    }
+    &.fun {
       .flip-inner {
         transform: rotateY(180deg);
-      }
+      }  
     }
 
     .flip-inner {
-      height: 100%;
-      width: 100%;
       transition: transform 0.6s;
       transform-style: preserve-3d;
 
       .flip-front, .flip-back {
-        width: 100%;
-        height: 100%;
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
       }
