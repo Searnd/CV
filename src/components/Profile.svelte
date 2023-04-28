@@ -90,8 +90,8 @@
   .profile-picture {
     object-fit: cover;
     border-radius: 50%;
-    height: 100px;
-    width: 100px;
+    height: 200px;
+    width: 200px;
     transition: transform 0.6s;
 
     &:hover {
