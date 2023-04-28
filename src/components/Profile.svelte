@@ -30,8 +30,12 @@
   </div>
   <p id="my-name">{myName}</p>
   <div class="profile-line links">
-    <i><FaLinkedin/></i>
-    <i><FaGithub/></i>
+    <a href="https://www.linkedin.com/in/andres-flores-3a679bb5">
+      <i class="li-icon"><FaLinkedin/></i>
+    </a>
+    <a href="https://github.com/Searnd">
+      <i class="gh-icon"><FaGithub/></i>
+    </a>
   </div>
   <div class="profile-line email">
     <i><FaEnvelope/></i>
@@ -46,14 +50,20 @@
 </div>
 
 <style lang="scss">
+  i {
+    display: block;
+    height: 1em;
+  }
+  .li-icon {
+    color: #0a66c2;
+  }
+
+  .gh-icon {
+    color: black;
+  }
   .profile-line {
     display: flex;
     gap: 0.5em;
-
-    i {
-      display: block;
-      height: 1em;
-    }
   }
   .email {
     i {
