@@ -2,6 +2,14 @@
   import boringProfilePicture from "../assets/pfp0.jpg";
   import funProfilePicture from "../assets/pfp1.jpg";
 
+  import FaLinkedin from "svelte-icons/fa/FaLinkedin.svelte";
+  import FaGithub from "svelte-icons/fa/FaGithub.svelte";
+  import FaEnvelope from "svelte-icons/fa/FaEnvelope.svelte";
+  import FaPhone from "svelte-icons/fa/FaPhone.svelte";
+
+  const email = "andres.flores@outlook.fr";
+  const phone = "(514) 632-3485";
+
   let isFunMode = false;
 
   $: myName = isFunMode ? "Andres Flores 🤙" : "Andres Flores";
@@ -21,9 +29,43 @@
       src="{profilePicture}" alt="profile">
   </div>
   <p id="my-name">{myName}</p>
+  <div class="profile-line links">
+    <i><FaLinkedin/></i>
+    <i><FaGithub/></i>
+  </div>
+  <div class="profile-line email">
+    <i><FaEnvelope/></i>
+    <a href={`mailto:${email}`}>
+      {email}
+    </a>
+  </div>
+  <div class="profile-line phone">
+    <i><FaPhone/></i>
+    {phone}
+  </div>
 </div>
 
 <style lang="scss">
+  .profile-line {
+    display: flex;
+    gap: 0.5em;
+
+    i {
+      display: block;
+      height: 1em;
+    }
+  }
+  .email {
+    i {
+      align-self: flex-end;
+    }
+  }
+
+  .phone {
+    i {
+      align-self: center;
+    }
+  }
   .profile-area {
     width: 25%;
     display: flex;
