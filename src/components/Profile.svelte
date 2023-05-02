@@ -30,10 +30,10 @@
   </div>
   <p id="my-name">{myName}</p>
   <div class="profile-line links">
-    <a href="https://www.linkedin.com/in/andres-flores-3a679bb5">
+    <a target="_blank" href="https://www.linkedin.com/in/andres-flores-3a679bb5">
       <i class="li-icon"><FaLinkedin/></i>
     </a>
-    <a href="https://github.com/Searnd">
+    <a target="_blank" href="https://github.com/Searnd">
       <i class="gh-icon"><FaGithub/></i>
     </a>
   </div>
