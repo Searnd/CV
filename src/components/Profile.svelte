@@ -21,10 +21,10 @@
 </script>
 
 <div class="profile-area">
-  <div class="profile-picture-container" class:back={isFunMode}>
+  <div class="profile-picture-container" class:flipped={isFunMode}>
     <img
       on:click={toggleFunMode}
-      class:back={isFunMode}
+      class:flipped={isFunMode}
       class="profile-picture"
       src="{profilePicture}" alt="profile">
   </div>
@@ -99,7 +99,7 @@
     }
   }
 
-  .back {
+  .flipped {
     transform: rotateY(180deg);
   }
   #my-name {
